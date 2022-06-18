@@ -6,8 +6,7 @@
 using namespace std;
 
 
-int main()
-{	
+int main() {	
 	int m = 3, n = 2;
 
 	vector<int> arr[m];
