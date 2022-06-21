@@ -29,5 +29,23 @@ int main()
     m.remove(20);
     for (auto it = m.begin(); it != m.end(); it++)
     	cout << (*it) << " ";
+
+    cout << endl;
+
+       // Declaring a forward list
+    forward_list<int> o;
+
+    // Assigning values to the list
+    o.assign({ 10, 20, 30, 10 });
+
+    // Declaring another forward list
+    forward_list<int> o2;
+
+    // Assigning one list to another
+    o2.assign(o.begin(), o.end());
+
+    // Displaying the second list
+    for (auto it = o2.begin(); it != o2.end(); it++)
+        cout << (*it) << " ";
     return 0;
 }
