@@ -24,6 +24,7 @@ int main()
     //     * 10 *  <- Queue's front
     //     ******
 
+    // 1040
     string curr = q.front();
     q.push(curr + "40");
     
