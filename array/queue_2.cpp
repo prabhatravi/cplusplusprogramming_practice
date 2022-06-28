@@ -27,6 +27,8 @@ int main()
     // 1040
     string curr = q.front();
     q.push(curr + "40");
+    // 1050
+    q.push(curr + "50");
     
     // While Queue is not empty
     while(!q.empty())
