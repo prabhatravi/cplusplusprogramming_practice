@@ -76,6 +76,21 @@ int main()
     else
         cout << "\n40 Not Found!\n";
 
+    // when 2 is present
+    auto it = m.lower_bound(20);
+    cout << "The lower bound of key 20 is ";
+    cout << (*it).first << " " << (*it).second << endl;
+
+    // when 3 is not present
+    // points to next greater after 3
+    it = m.lower_bound(25);
+    cout << "The lower bound of key 30 is ";
+    cout << (*it).first << " " << (*it).second;
+
+    // when 45 exceeds the exceeds the maximum key in the container, then the iterator returned points to the number of elements in the map as key and element=0
+    it = m.lower_bound(45);
+    cout << "\nThe lower bound of key 35 is ";
+    cout << (*it).first << " " << (*it).second;
 
     return 0;
 }
