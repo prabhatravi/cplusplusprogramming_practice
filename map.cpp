@@ -106,7 +106,26 @@ int main()
     // of mp is returned as key and value as 0.
     it = m.upper_bound(47);
     cout << "The upper bound of key 47 is ";
-    cout << (*it).first << " " << (*it).second;
+    cout << (*it).first << " " << (*it).second << "\n";
+
+    // function to erase given position
+    it = m.find(20);
+
+    // Passing iterator pointing to key 2
+    // to erase it
+    m.erase(it);
+
+    cout << "Size after erasing one element: " << m.size() << "\n";
+
+    // Passing key directly to erase element
+    m.erase(40);
+
+    cout << "Size after erasing second element: " << m.size() << "\n";
+
+    // Erasing complete range
+    m.erase(m.begin(), m.end());
+
+    cout << "Final Size: " << m.size() << "\n";
 
     return 0;
 }
