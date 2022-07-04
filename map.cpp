@@ -91,6 +91,22 @@ int main()
     it = m.lower_bound(45);
     cout << "\nThe lower bound of key 35 is ";
     cout << (*it).first << " " << (*it).second;
+    cout << endl;
+
+    it = m.upper_bound(10);
+    cout << "The upper bound of key 10 is ";
+    cout << (*it).first << " " << (*it).second << endl;
+
+    // when 21 is not present
+    it = m.upper_bound(21);
+    cout << "The upper bound of key 21 is ";
+    cout << (*it).first << " " << (*it).second << endl;
+
+    // when 47 is exceeds the maximum key, so size
+    // of mp is returned as key and value as 0.
+    it = m.upper_bound(47);
+    cout << "The upper bound of key 47 is ";
+    cout << (*it).first << " " << (*it).second;
 
     return 0;
 }
