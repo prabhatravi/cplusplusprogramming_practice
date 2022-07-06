@@ -36,9 +36,14 @@ int main()
         cout << "10 found \n";
     else
         cout << "10 not found";
-        
+
+    s.erase(5);
+    cout<<"Size of unordered_set: "<<s.size()<<endl;
+
     // Clear all elements
-    s.clear();
+    //s.clear();
+    //other way to delete the range
+    s.erase(s.begin(), s.end());
     
     cout<<"Size after clearing unordered_set: "
         << s.size()<<endl;
