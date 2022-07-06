@@ -16,6 +16,7 @@ int main()
     s.insert(5);
     s.insert(15);
     s.insert(20);
+    s.insert(15);
     
     // Traversing the unordered_set
     for(auto it = s.begin(); it!=s.end(); it++)
@@ -25,7 +26,17 @@ int main()
     cout<<endl;
     
     cout<<"Size of unordered_set: "<<s.size()<<endl;
-    
+
+    if (s.find(10) == s.end())
+        cout << "Not FOund \n";
+    else
+        cout << "FOund \n";
+
+    if (s.count(10) == 1)
+        cout << "10 found \n";
+    else
+        cout << "10 not found";
+        
     // Clear all elements
     s.clear();
     
