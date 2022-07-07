@@ -21,4 +21,41 @@ int main()
     for (auto x : umap)
       cout << x.first << " " << x.second << endl;
 
+    // Searching for the key "Practice"
+    if(umap.find("Practice")!=umap.end())
+        cout<<"The key Practice Found!\n";
+    else
+        cout<<"The key Practice Not Found!\n";
+    
+    // Accessing key value pair returned by find()
+    auto it = umap.find("Practice");
+    if(it!=umap.end())
+        cout<<"Key is: "<<it->first<<", "
+            <<"Value is: "<<it->second
+            << endl;
+    
+    // Searching if the key "Practice" exists 
+    // using count()
+    if(umap.count("Practice")>0)
+        cout<<"The key Practice Found!\n";
+    else
+        cout<<"The key Practice Not Found!\n";
+    
+    // Printing size of the map before erasing 
+    cout<<"Size before erasing: "<<umap.size()<<"\n";
+    
+    // Erase the key "Practice"
+    umap.erase("Practice");
+    
+    // Printing size after erasing an element
+    cout<<"Size after erasing: "<<umap.size()<<"\n";
+    
+    // Erasing a range
+    umap.erase(umap.begin(), umap.end());
+    
+    // Size after erasing all elements
+    cout<<"Size after erasing all elements: "
+        <<umap.size();
+    
+
 }
